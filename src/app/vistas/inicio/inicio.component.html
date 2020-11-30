@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+
+        <div class="col">
+               <h1> *ngIf</h1>
+               <hr>
+
+               <div  class="card" style="width: 100%;">
+                <img *ngIf="mostrar" class="card-img-top" src="https://i.pinimg.com/originals/70/fa/97/70fa97bac09e524bae4c006a1ead5512.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">{{obj.titulo}}</h5>
+                  <p class="card-text">{{obj.mensaje}}</p>
+                </div>
+              </div>
+
+              <button class="btn btn-block btn-outline-primary" (click)="mostrar = !mostrar">
+                  Ocultar / Mostrar
+              </button>
+        </div>
+        <div class="col">
+               <h1>
+                *ngFor
+               </h1>
+
+               <hr>
+
+               <ul class="list-group">
+                   <li class="list-group-item " *ngFor="let item of arreglo; let indice = index;">
+                        <span style="font-weight: 600;">{{indice + 1 }}</span>.-{{item}}
+                   </li>
+               </ul>
+        </div>
+
+    </div>
+</div>
